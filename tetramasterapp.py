@@ -114,7 +114,7 @@ with gr.Blocks(css=CSS) as app:
         defender = gr.Textbox(label="Defender Card")
 
     run_btn = gr.Button("Run Simulation")
-    output_text = gr.Textbox(label="Result", interactive=False)
+    output_text = gr.Textbox(label="Result (Top 100 samples shown below)", interactive=False)
     table = gr.Dataframe()
 
     run_btn.click(fn=run_simulation, inputs=[attacker, defender], outputs=[output_text, table])
